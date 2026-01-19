@@ -1,5 +1,6 @@
-screen.QAQ=§3💧 Raincore 💧
-screen.QAQ.comment=§3A Minecraft 💧 Shader
+screen.QAQ=§3💧 §l雨核 §r§3💧
+screen.QAQ.comment=§81998年的雨从未停过。
+screen.COMMENT=§8[已编辑] §7§l雨核§r§7体验
 screen.AwA=动态模糊
 screen.OvO=泛光
 screen.XwX=景深
@@ -56,7 +57,7 @@ value.BRIGHTNESS_GAIN.0.3=默认
 option.SKYLIGHT_GAIN=天空光增益
 value.SKYLIGHT_GAIN.0.0=关闭
 
-option.FOG_SIZE=雾大小
+option.FOG_SIZE=迷雾
 value.FOG_SIZE.0.3=默认
 value.FOG_SIZE.100.0=关闭雾
 option.FOG_COVER_SKY=雾覆盖天空
