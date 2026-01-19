@@ -15,8 +15,8 @@ void main() {
     color *= texture(lightmap, lmcoord);
     
     // 水面颜色
-    vec3 waterTint = vec3(0.8, 1.0, 0.6);
-    color.rgb *= waterTint;
-    
-    if (color.a < alphaTestRef) discard;
+    //vec3 waterTint = vec3(0.8, 1.0, 0.6);
+    //color.rgb *= waterTint;
+    color.a = 1.0;
+    //if (color.a < alphaTestRef) discard;
 }

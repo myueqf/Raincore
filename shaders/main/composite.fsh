@@ -19,9 +19,9 @@ uniform mat4 shadowModelView;
 uniform mat4 shadowProjection;
 
 // 颜色
-const vec3 blocklightColor = vec3(1.15, 1.0, 0.9);
-const vec3 skylightColor = vec3(0.7, 0.7, 1.0);
-const vec3 sunlightColor = vec3(0.9, 0.8, 0.7);
+const vec3 blocklightColor = vec3(1.0, 1.0, 1.1);
+const vec3 skylightColor = vec3(0.3725, 0.5608, 0.6392);
+const vec3 sunlightColor = skylightColor;
 
 in vec2 texcoord;
 
@@ -41,7 +41,8 @@ void main() {
     }
 
     // 昼夜循环
-    float timeNormalized = mod((worldTime + 8000.0) / 24000.0, 1.0);
+    // float timeNormalized = mod((worldTime + 8000.0) / 24000.0, 1.0);
+    float timeNormalized = mod((13000 + 8000.0) / 24000.0, 1.0);
 #if BRIGHTNESS_GAIN >= 0.1
     float dayNightStrength = (0.5 + BRIGHTNESS_GAIN) + 0.5 * cos((timeNormalized - 0.5) * 6.2832);
 #else
@@ -67,6 +68,7 @@ void main() {
     vec3 worldLightVector = mat3(gbufferModelViewInverse) * lightVector;
     
     float shadow = step(shadowScreenPos.z, texture(shadowtex0, shadowScreenPos.xy).r);
+    //float shadow = texture(shadowtex0, shadowScreenPos.xy).r > shadowScreenPos.z - 0.002 ? 1.0 : 0.4;
 
     // 光照计算
     vec3 blocklight = lightmap.r * lightmap.r * blocklightColor;

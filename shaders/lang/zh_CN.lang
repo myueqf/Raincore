@@ -1,5 +1,5 @@
-screen.QAQ=§bLanternShader
-screen.QAQ.comment=QAQ
+screen.QAQ=§3💧 Raincore 💧
+screen.QAQ.comment=§3A Minecraft 💧 Shader
 screen.AwA=动态模糊
 screen.OvO=泛光
 screen.XwX=景深
@@ -8,7 +8,7 @@ screen.QwQ=其他
 option.LIGHT_ONLY=纯白世界
 value.LIGHT_ONLY.0=关闭
 value.LIGHT_ONLY.1=开启
-option.LIGHT_ONLY.comment=DEBUG\n将方块渲染为纯白～ 截图时可能效果独特嗷～
+option.LIGHT_ONLY.comment=DEBUG\n将方块渲染为纯白，截图时可能效果独特？
 
 option.PIXEL=像素化
 value.PIXEL.0=160*120
@@ -16,7 +16,7 @@ value.PIXEL.1=320*240
 value.PIXEL.2=640*480
 value.PIXEL.3=1280*960
 value.PIXEL.4=关闭
-option.PIXEL.comment=并不能提升性能QAQ但是可以改善低分辨率全屏时画面变糊的问题，让像素边缘变清晰～
+option.PIXEL.comment=§l并不能提升性能§r，因为这只是一个滤镜效果。
 
 option.MOTIONBLUR=动态模糊
 value.MOTIONBLUR.0=关闭
@@ -28,7 +28,6 @@ value.EXPONENT.1.0=默认
 value.EXPONENT.1.5=较强
 value.EXPONENT.2.0=强
 value.EXPONENT.2.5=极强
-option.EXPONENT.comment=（=^･ω･^=）
 option.THRESHOLD=最小触发
 value.THRESHOLD.0.1=较暗
 value.THRESHOLD.0.2=暗
@@ -40,34 +39,39 @@ option.THRESHOLD.comment=设置最小触发泛光的亮度～
 option.DOF=景深
 value.DOF.1=开启
 value.DOF.0=关闭
-option.DOF.comment=会增加性能开销嗷QAQ
+option.DOF.comment=§l可能§r会带来性能开销，虽然通常不大。
 option.DOFDEBUG=调试
 value.DOFDEBUG.1=开启
 value.DOFDEBUG.0=关闭
-option.DOFDEBUG.comment=元素视野。。。？
 option.DOF_STRENGTH=强度
 value.DOF_STRENGTH.8.0=默认
 option.DOF_SAMPLE=采样次数
-value.DOF_SAMPLE.24=默认
-option.DOF_SAMPLE.comment=次数越多性能开销越大嗷QAQ
+value.DOF_SAMPLE.64=默认
+option.DOF_SAMPLE.comment=不可贪多哦～
 
 option.BRIGHTNESS_GAIN=昼夜亮度增益
 value.BRIGHTNESS_GAIN.0.0=关闭
+value.BRIGHTNESS_GAIN.0.3=默认
 
 option.SKYLIGHT_GAIN=天空光增益
 value.SKYLIGHT_GAIN.0.0=关闭
 
 option.FOG_SIZE=雾大小
+value.FOG_SIZE.0.3=默认
 value.FOG_SIZE.100.0=关闭雾
 option.FOG_COVER_SKY=雾覆盖天空
 value.FOG_COVER_SKY.1=开启
 value.FOG_COVER_SKY.0=关闭
 
 option.PIXELSHADOW=像素阴影
-value.PIXELSHADOW.true=§a开启
+value.PIXELSHADOW.true=开启
 value.PIXELSHADOW.false=§c关闭
+option.PIXELSHADOW.comment=想要关闭阴影？可以去§lSodium§r的设置里调整～ \n 虽然通常不会带来性能提升。
 
 option.SKYCOLORSTYLE=天空样式
+value.SKYCOLORSTYLE.0=复杂
+value.SKYCOLORSTYLE.1=简单
+value.SKYCOLORSTYLE.2=默认
 
 option.GAMMA=伽马校正
-value.GAMMA.0.95=默认
+value.GAMMA.1.33=默认

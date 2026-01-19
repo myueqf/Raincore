@@ -31,7 +31,7 @@ void main() {
   
   /* 雾效 */
   if(isEyeInWater == 1) {
-    vec3 underwaterFogColor = vec3(0.1, 0.3, 0.5);
+    vec3 underwaterFogColor = vec3(0.1137, 0.1686, 0.1804);
     
     if(depth == 1.0) {
       color.rgb = mix(color.rgb, underwaterFogColor, 0.95);
@@ -59,11 +59,11 @@ void main() {
     // ===== 雨雾 =====
     float fogFactor = mix(
     exp(-10 * (FOG_SIZE - dist)),   // 普通雾
-    exp(-10 * (0.3 - dist)),   // 雨雾
+    exp(-10 * (0.2 - dist)),   // 雨雾
     smoothstep(0.0, 0.3, rainStrength)
     );
     fogFactor = clamp(fogFactor, 0.0, 1.0);
-    color.rgb = mix(color.rgb, fogColor, fogFactor);
+    color.rgb = mix(color.rgb, vec3(0.2353, 0.3451, 0.4078), fogFactor);
     // ==============
   }
 }

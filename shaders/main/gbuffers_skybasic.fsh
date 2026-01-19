@@ -28,10 +28,14 @@ vec3 calcSkyColor(vec3 pos) {
     vec3 finalSkyColor = mix(nightCol, baseSkyColor, clamp(sunDot * 0.5 + 0.5, 0.0, 1.0));
     return finalSkyColor;
 }
-#else
+#elif SKYCOLORSTYLE == 1
 vec3 calcSkyColor(vec3 pos) {
     float upDot = dot(pos, gbufferModelView[1].xyz);
     return mix(skyColor * vec3(0.7, 0.6, 0.7), fogColor, fogify(max(upDot, 0.0), 0.1));
+}
+#else
+vec3 calcSkyColor(vec3 pos) {
+    return vec3(0.0);
 }
 #endif
 
