@@ -85,4 +85,6 @@ void main() {
     color = texture(colortex0, texcoord);
     color.rgb *= pow(blocklight, vec3(5.0)) * 3.0 + skylight + sunlight + vec3(0.15);
     color.rgb = pow(color.rgb, vec3(2.2));
+    float noise = fract(sin(dot(texcoord, vec2(12.9898, 78.233) * worldTime)) * 43758.5453);
+    color.rgb += noise * 0.02;
 }
