@@ -45,9 +45,9 @@ option.DOFDEBUG=DOF Debug
 value.DOFDEBUG.1=On
 value.DOFDEBUG.0=Off
 option.DOF_STRENGTH=DOF Strength
-value.DOF_STRENGTH.8.0=Default
+value.DOF_STRENGTH.64.0=Default
 option.DOF_SAMPLE=Sample Count
-value.DOF_SAMPLE.64=Default
+value.DOF_SAMPLE.24=Default
 option.DOF_SAMPLE.comment=Don't be too greedy with this~
 
 option.BRIGHTNESS_GAIN=Day/Night Brightness

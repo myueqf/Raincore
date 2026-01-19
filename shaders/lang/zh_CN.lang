@@ -45,9 +45,9 @@ option.DOFDEBUG=调试
 value.DOFDEBUG.1=开启
 value.DOFDEBUG.0=关闭
 option.DOF_STRENGTH=强度
-value.DOF_STRENGTH.8.0=默认
+value.DOF_STRENGTH.64.0=默认
 option.DOF_SAMPLE=采样次数
-value.DOF_SAMPLE.64=默认
+value.DOF_SAMPLE.24=默认
 option.DOF_SAMPLE.comment=不可贪多哦～
 
 option.BRIGHTNESS_GAIN=昼夜亮度增益
