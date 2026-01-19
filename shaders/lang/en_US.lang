@@ -29,7 +29,7 @@ value.EXPONENT.1.0=Default
 value.EXPONENT.1.5=Stronger
 value.EXPONENT.2.0=Strong
 value.EXPONENT.2.5=Extremely Strong
-option.THRESHOLD=Minimum Threshold
+option.THRESHOLD=Bloom Threshold
 value.THRESHOLD.0.1=Dimmer
 value.THRESHOLD.0.2=Dim
 value.THRESHOLD.0.3=Default
@@ -57,7 +57,7 @@ value.BRIGHTNESS_GAIN.0.3=Default
 option.SKYLIGHT_GAIN=Sky Light Gain
 value.SKYLIGHT_GAIN.0.0=Off
 
-option.FOG_SIZE=Fog Size
+option.FOG_SIZE=Fog Density
 value.FOG_SIZE.0.3=Default
 value.FOG_SIZE.100.0=Disable Fog
 option.FOG_COVER_SKY=Fog Covers Sky
@@ -76,3 +76,11 @@ value.SKYCOLORSTYLE.2=Default
 
 option.GAMMA=Gamma Correction
 value.GAMMA.1.33=Default
+
+option.ENTITYHIDDEN=Perception Boundary
+option.ENTITYHIDDEN.comment=Controls the distance at which entities fade away when near the player.\nLarger values result in a wider hidden range.\nThis is not just a visual dissipation, but a sense of spiritual solitude.
+value.ENTITYHIDDEN.0.0=Off
+value.ENTITYHIDDEN.2.0=Close
+value.ENTITYHIDDEN.5.0=Default
+value.ENTITYHIDDEN.15.0=Far
+value.ENTITYHIDDEN.20.0=Very Far!

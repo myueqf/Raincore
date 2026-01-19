@@ -38,3 +38,6 @@ float exponent = EXPONENT;
 
 /* Gamma */
 #define GAMMA 1.33 // [0.55 0.65 0.75 0.85 0.95 1.00 1.25 1.33 1.40 1.55]
+
+/* 实体隐藏 */
+#define ENTITYHIDDEN 5.0 // [0.0 2.0 5.0 15.0 20.0]
