@@ -11,12 +11,8 @@ in vec4 glcolor;
 layout(location = 0) out vec4 color;
 
 void main() {
-    color = texture(gtexture, texcoord) * glcolor;
-    color *= texture(lightmap, lmcoord);
-    
-    // 水面颜色
-    //vec3 waterTint = vec3(0.8, 1.0, 0.6);
-    //color.rgb *= waterTint;
+    vec4 texColor = texture(gtexture, texcoord) * glcolor;
+    vec3 light = texture(lightmap, lmcoord).rgb;
+    color.rgb = texColor.rgb * light;
     color.a = 1.0;
-    //if (color.a < alphaTestRef) discard;
 }
