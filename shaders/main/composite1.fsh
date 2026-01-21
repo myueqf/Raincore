@@ -41,7 +41,7 @@ void main() {
       float dist = length(viewPos) / far;
       
       // 水下雾
-      float underwaterFogFactor = 1.0 - exp(-dist * 15.0);
+      float underwaterFogFactor = 1.3 - exp(-dist * 15.0);
       color.rgb = mix(color.rgb, underwaterFogColor, clamp(underwaterFogFactor, 0.0, 0.9));
     }
   } else {
