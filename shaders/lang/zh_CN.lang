@@ -8,7 +8,7 @@ screen.XwX=景深
 screen.QwQ=杂项
 
 option.LIGHT_ONLY=纯白世界
-value.LIGHT_ONLY.0=关闭
+value.LIGHT_ONLY.0=§7关闭
 value.LIGHT_ONLY.1=开启
 option.LIGHT_ONLY.comment=DEBUG\n将方块渲染为纯白，截图时可能效果独特？
 
@@ -80,9 +80,9 @@ value.GAMMA.1.33=默认
 
 option.ENTITYHIDDEN=感知边界
 option.ENTITYHIDDEN.comment=控制生物在靠近玩家时消失的距离。\n数值越大，隐藏范围越广。\n这不仅是视觉的消散，更是灵魂的孤独感。
-value.ENTITYHIDDEN.0.0=关闭
+value.ENTITYHIDDEN.0.0=§8禁用
 value.ENTITYHIDDEN.2.0=近距离
-value.ENTITYHIDDEN.5.0=默认
+value.ENTITYHIDDEN.5.0=§7默认
 value.ENTITYHIDDEN.15.0=远距离
 value.ENTITYHIDDEN.20.0=非常远！
 

@@ -8,7 +8,7 @@ screen.XwX=Depth of Field
 screen.QwQ=Miscellaneous
 
 option.LIGHT_ONLY=White World
-value.LIGHT_ONLY.0=Off
+value.LIGHT_ONLY.0=§7Off
 value.LIGHT_ONLY.1=On
 option.LIGHT_ONLY.comment=DEBUG\nRenders blocks as pure white. Might look unique for screenshots?
 
@@ -80,9 +80,9 @@ value.GAMMA.1.33=Default
 
 option.ENTITYHIDDEN=Perception Boundary
 option.ENTITYHIDDEN.comment=Controls the distance at which entities fade away when near the player.\nLarger values result in a wider hidden range.\nThis is not just a visual dissipation, but a sense of spiritual solitude.
-value.ENTITYHIDDEN.0.0=Off
+value.ENTITYHIDDEN.0.0=§8Disabled
 value.ENTITYHIDDEN.2.0=Close
-value.ENTITYHIDDEN.5.0=Default
+value.ENTITYHIDDEN.5.0=§7Default
 value.ENTITYHIDDEN.15.0=Far
 value.ENTITYHIDDEN.20.0=Very Far!
 
