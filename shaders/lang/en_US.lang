@@ -85,3 +85,8 @@ value.ENTITYHIDDEN.2.0=Close
 value.ENTITYHIDDEN.5.0=Default
 value.ENTITYHIDDEN.15.0=Far
 value.ENTITYHIDDEN.20.0=Very Far!
+
+option.SHADOW_SOFT=Soft Shadows
+option.SHADOW_SOFT.comment=Perhaps everyone prefers gentle things?\n(Though it's essentially still just mosaics)
+value.SHADOW_SOFT.0=Off
+value.SHADOW_SOFT.1=On

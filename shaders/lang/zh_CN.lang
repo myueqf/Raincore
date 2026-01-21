@@ -85,3 +85,8 @@ value.ENTITYHIDDEN.2.0=近距离
 value.ENTITYHIDDEN.5.0=默认
 value.ENTITYHIDDEN.15.0=远距离
 value.ENTITYHIDDEN.20.0=非常远！
+
+option.SHADOW_SOFT=柔和阴影
+option.SHADOW_SOFT.comment=或许人们都喜欢温柔的东西？\n（虽然本质上还是马赛克）
+value.SHADOW_SOFT.0=关闭
+value.SHADOW_SOFT.1=开启

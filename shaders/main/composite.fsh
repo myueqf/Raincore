@@ -66,9 +66,21 @@ void main() {
 
     vec3 lightVector = normalize(shadowLightPosition);
     vec3 worldLightVector = mat3(gbufferModelViewInverse) * lightVector;
-    
+
+#if SHADOW_SOFT == 0
     float shadow = step(shadowScreenPos.z, texture(shadowtex0, shadowScreenPos.xy).r);
-    //float shadow = texture(shadowtex0, shadowScreenPos.xy).r > shadowScreenPos.z - 0.002 ? 1.0 : 0.4;
+#elif SHADOW_SOFT == 1
+    // --- 软阴影 ---
+    float shadow = 0.0;
+    float shadowRadius = 0.0008; // 模糊半径
+
+    shadow += step(shadowScreenPos.z, texture(shadowtex0, shadowScreenPos.xy + vec2( shadowRadius,  shadowRadius)).r);
+    shadow += step(shadowScreenPos.z, texture(shadowtex0, shadowScreenPos.xy + vec2(-shadowRadius,  shadowRadius)).r);
+    shadow += step(shadowScreenPos.z, texture(shadowtex0, shadowScreenPos.xy + vec2( shadowRadius, -shadowRadius)).r);
+    shadow += step(shadowScreenPos.z, texture(shadowtex0, shadowScreenPos.xy + vec2(-shadowRadius, -shadowRadius)).r);
+    shadow /= 4.0;
+    // -----------------------
+#endif
 
     // 光照计算
     vec3 blocklight = lightmap.r * lightmap.r * blocklightColor;

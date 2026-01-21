@@ -41,3 +41,6 @@ float exponent = EXPONENT;
 
 /* 实体隐藏 */
 #define ENTITYHIDDEN 5.0 // [0.0 2.0 5.0 15.0 20.0]
+
+/* 柔和阴影 */
+#define SHADOW_SOFT 1 // [0 1]
