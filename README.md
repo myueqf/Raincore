@@ -18,6 +18,6 @@ For the best visual balance, a render distance of 8 chunks is recommended. While
 - >[Github](https://github.com/myueqf/Raincore)
 - >[Discord](https://discord.gg/9ATsdr2ms7)
 
-#### FQA：
+#### FAQ：
 - **Q**: Can I include this shader in my Modpack?
 - **A**: Distributing this shader as part of a modpack without modifying its source code is not considered creating a derivative work. Other components of the modpack are not bound by the GPLv3 license.
