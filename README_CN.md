@@ -4,6 +4,7 @@ The rain never stopped in 1998.
 
 ![Supported Versions](https://img.shields.io/badge/SUPPORTS-IRIS,%20OCULUS|%201.18%20to%201.21-4E737E?style=for-the-badge&logo=Modrinth&labelColor=334A51)
 [![GitHub Stars](https://img.shields.io/github/stars/myueqf/Raincore?style=for-the-badge&logo=github&color=4E737E&labelColor=334A51)](https://github.com/myueqf/Raincore/stargazers)
+[![Language](https://img.shields.io/badge/LANGUAGE-中%20|%20EN-4E737E?style=for-the-badge&labelColor=334A51)](./README_CN.md)
 
 #### 关于：
 这是一个带有雨后泥土湿润气息的着色器，具有像素效果和噪点。  

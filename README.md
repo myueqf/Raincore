@@ -4,7 +4,7 @@ The rain never stopped in 1998.
 
 ![Supported Versions](https://img.shields.io/badge/SUPPORTS-IRIS,%20OCULUS|%201.18%20to%201.21-4E737E?style=for-the-badge&logo=Modrinth&labelColor=334A51)
 [![GitHub Stars](https://img.shields.io/github/stars/myueqf/Raincore?style=for-the-badge&logo=github&color=4E737E&labelColor=334A51)](https://github.com/myueqf/Raincore/stargazers)
-[![EN/中](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADUAAAAcCAYAAADBRfeOAAAAAXNSR0IB2cksfwAAAARnQU1BAACxjwv8YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAAuIwAALiMBeKU/dgAAAAd0SU1FB+oBFREqNpyZjK8AAAEGSURBVFjDY/QrrvvPMMwAE8MwBKOeGvXUqKeoC1hgjO6sMJyKzl27w7D8wDmc6kqnrSLKMpheZPPwgUgHIwYjLRWS7Bj+MQUDL9+8Z3j66i2K2N0nrxjwqSM1BtBjAxeQFhMmSt3dJ68YTt15gttTT1+9JcphyOpgSYQcQKxeQuqQPTUykp+RlgpGqJCTrEjN7NjsIKQXV+E2WlAMWU8RW1CMtigGOqYGCmAroIgpFEZuTEmLCWPU3ug1NintPELg3LU7eFsU4iKCBNWhF2QYnhIXEYQbhKvGJgUQquPwyUU6GMHdQkrhNbyTH7FNe2zqSOkWjBbpZALG0SGyUU+NemrUU4QAABfKgooCvtalAAAAAElFTkSuQmCC)](./README_CN.md)
+[![Language](https://img.shields.io/badge/LANGUAGE-EN%20|%20中-4E737E?style=for-the-badge&labelColor=334A51)](./README_CN.md)
 
 #### About：
 Raincore is a shader pack that captures the petrichor scent of moist earth after the rain, featuring distinct pixelated effects and grain/noise.  
