@@ -2,10 +2,10 @@ screen.QAQ=§3💧 §l雨核 §r§3💧
 screen.QAQ.comment=§8Build: Alpha_0.98.rain
 screen.COMMENT=§8[已编辑] §7§l雨核§r§7体验
 screen.COMMENT.comment=§81998年的雨从未停过。
-screen.AwA=动态模糊
-screen.OvO=泛光
+screen.AwA=画面
+screen.OvO=环境
 screen.XwX=景深
-screen.QwQ=其他
+screen.QwQ=杂项
 
 option.LIGHT_ONLY=纯白世界
 value.LIGHT_ONLY.0=关闭

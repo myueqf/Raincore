@@ -2,10 +2,10 @@ screen.QAQ=§3💧 §lRaincore §r§3💧
 screen.QAQ.comment=§8Build: Alpha_0.98.rain
 screen.COMMENT=§8[REDACTED]§7§l Raincore §r§7Experience
 screen.COMMENT.comment=§8The rain never stopped in 1998.
-screen.AwA=Motion Blur
-screen.OvO=Bloom
+screen.AwA=Graphics
+screen.OvO=Environment
 screen.XwX=Depth of Field
-screen.QwQ=Other
+screen.QwQ=Miscellaneous
 
 option.LIGHT_ONLY=White World
 value.LIGHT_ONLY.0=Off
