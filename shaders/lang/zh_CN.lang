@@ -18,7 +18,7 @@ value.PIXEL.1=320*240
 value.PIXEL.2=640*480
 value.PIXEL.3=1280*960
 value.PIXEL.4=关闭
-option.PIXEL.comment=§l并不能提升性能§r，因为这只是一个滤镜效果。
+option.PIXEL.comment=§l并不能提升性能§r，因为这只是一个滤镜。
 
 option.MOTIONBLUR=动态模糊
 value.MOTIONBLUR.0=关闭
