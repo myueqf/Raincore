@@ -7,7 +7,7 @@ The rain never stopped in 1998.
 [![Language](https://img.shields.io/badge/LANGUAGE-EN%20|%20中-4E737E?style=for-the-badge&labelColor=334A51)](./README_CN.md)
 
 #### About：
-Raincore is a shader pack that captures the petrichor scent of moist earth after the rain, featuring distinct pixelated effects and grain/noise.  
+Raincore is a shader pack that captures the petrichor scent of moist earth after the rain, featuring distinct pixelated effects and grain/lo-fi.  
 This is my fifth shader pack, built upon my previous work, [Lantern](https://modrinth.com/shader/lantern-shader). I hope you enjoy it! (^-^)
 
 #### Performance：
@@ -17,6 +17,8 @@ For the best visual balance, a render distance of 8 chunks is recommended. While
 #### Links：
 - >[Github](https://github.com/myueqf/Raincore)
 - >[Discord](https://discord.gg/9ATsdr2ms7)
+- >[Modrinth](https://modrinth.com/shader/raincore)
+- >[CurseForge](https://www.curseforge.com/minecraft/shaders/raincore)
 
 #### FAQ：
 - **Q**: Can I include this shader in my Modpack?

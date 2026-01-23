@@ -17,6 +17,8 @@ The rain never stopped in 1998.
 #### 链接：
 - >[Github](https://github.com/myueqf/Raincore)
 - >[Discord](https://discord.gg/9ATsdr2ms7)
+- >[Modrinth](https://modrinth.com/shader/raincore)
+- >[CurseForge](https://www.curseforge.com/minecraft/shaders/raincore)
 
 #### 一些问题：
 - **问**：我可以把这个着色器放到我的Modpack里吗？
