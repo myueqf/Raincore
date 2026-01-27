@@ -44,5 +44,11 @@ void main() {
     vec3 boost = step(vec3(threshold / SHADE_STEPS), error);
     color = stepped + (boost / SHADE_STEPS);
     #endif
+    // 冷色调～
+    #if COLOR == 1
+    color *= mix(vec3(1.), vec3(.8, .9, 1.3), 1.);
+    #elif COLOR == 2
+    color *= mix(vec3(1.), vec3(.62, .45, .95), 1.);
+    #endif
     gl_FragData[0] = vec4(color, 1.0);
 }

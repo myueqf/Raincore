@@ -90,3 +90,8 @@ option.SHADOW_SOFT=柔和阴影
 option.SHADOW_SOFT.comment=或许人们都喜欢温柔的东西？\n（虽然本质上还是马赛克）
 value.SHADOW_SOFT.0=关闭
 value.SHADOW_SOFT.1=开启
+
+option.COLOR=色调预设
+value.COLOR.0=§7暮土
+value.COLOR.1=§7晨雨
+value.COLOR.2=§7薰衣草

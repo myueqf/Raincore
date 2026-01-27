@@ -44,3 +44,6 @@ float exponent = EXPONENT;
 
 /* 柔和阴影 */
 #define SHADOW_SOFT 1 // [0 1]
+
+/* 调色 */
+#define COLOR 0 //[0 1 2]
