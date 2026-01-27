@@ -90,3 +90,8 @@ option.SHADOW_SOFT=Soft Shadows
 option.SHADOW_SOFT.comment=Perhaps everyone prefers gentle things?\n(Though it's essentially still just mosaics)
 value.SHADOW_SOFT.0=Off
 value.SHADOW_SOFT.1=On
+
+option.COLOR=Color Preset
+value.COLOR.0=§7Default
+value.COLOR.1=§7Morning Rain
+value.COLOR.2=§7Lavender
