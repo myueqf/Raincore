@@ -25,45 +25,40 @@ vec3 projectAndDivide(mat4 projectionMatrix, vec3 position){
 layout(location = 0) out vec4 color;
 
 void main() {
+  vec3 finalFogColor = vec3(0.2353, 0.3451, 0.4078);
+  if (texcoord.x < 0.0 || texcoord.x > 1.0 || texcoord.y < 0.0 || texcoord.y > 1.0) {
+    color = vec4(finalFogColor, 1.0);
+    return;
+  }
+
   color = texture(colortex0, texcoord);
 
   float depth = texture(depthtex0, texcoord).r;
-  
-  /* 雾效 */
-  if(isEyeInWater == 1) {
-    vec3 underwaterFogColor = vec3(0.1137, 0.1686, 0.1804);
-    
-    if(depth == 1.0) {
-      color.rgb = mix(color.rgb, underwaterFogColor, 0.95);
-    } else {
-      vec3 NDCPos = vec3(texcoord.xy, depth) * 2.0 - 1.0;
-      vec3 viewPos = projectAndDivide(gbufferProjectionInverse, NDCPos);
-      float dist = length(viewPos) / far;
-      
-      // 水下雾
-      float underwaterFogFactor = 1.3 - exp(-dist * 15.0);
-      color.rgb = mix(color.rgb, underwaterFogColor, clamp(underwaterFogFactor, 0.0, 0.9));
-    }
-  } else {
-    #if FOG_COVER_SKY == 0
-    if(depth == 1.0) {
-      return;
-    }
-    #endif
-    vec3 NDCPos = vec3(texcoord.xy, depth) * 2.0 - 1.0;
-    vec3 viewPos = projectAndDivide(gbufferProjectionInverse, NDCPos);
-    float dist = length(viewPos) / far;
-    // float fogFactor = exp(-10 * (0.3 - dist)); // 值越小雾越浓
-    // color.rgb = mix(color.rgb, fogColor, clamp(fogFactor, 0.0, 1.0));
 
-    // ===== 雨雾 =====
-    float fogFactor = mix(
-    exp(-10 * (FOG_SIZE - dist)),   // 普通雾
-    exp(-10 * (0.2 - dist)),   // 雨雾
-    smoothstep(0.0, 0.3, rainStrength)
-    );
-    fogFactor = clamp(fogFactor, 0.0, 1.0);
-    color.rgb = mix(color.rgb, vec3(0.2353, 0.3451, 0.4078), fogFactor);
-    // ==============
+  if (depth >= 1.0) {
+    #if FOG_COVER_SKY != 0
+    color.rgb = finalFogColor;
+    #endif
+    return;
   }
+
+  vec3 NDCPos = vec3(texcoord.xy, depth) * 2.0 - 1.0;
+  vec3 viewPos = projectAndDivide(gbufferProjectionInverse, NDCPos);
+  float dist = length(viewPos) / far;
+  // float fogFactor = exp(-10 * (0.3 - dist)); // 值越小雾越浓
+  // color.rgb = mix(color.rgb, fogColor, clamp(fogFactor, 0.0, 1.0));
+
+  // ===== 雨雾 =====
+  float fogFactor = mix(
+  exp(-10 * (FOG_SIZE - dist)),   // 普通雾
+  exp(-10 * (0.2 - dist)),        // 雨雾
+  smoothstep(0.0, 0.3, rainStrength)
+  );
+  // 水下雾
+  if(isEyeInWater == 1) {
+    fogFactor = fogFactor + 0.2;
+  }
+  fogFactor = clamp(fogFactor, 0.0, 1.0);
+  color.rgb = mix(color.rgb, vec3(0.2353, 0.3451, 0.4078), fogFactor);
+  // ==============
 }
