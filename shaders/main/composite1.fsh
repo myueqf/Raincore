@@ -51,7 +51,7 @@ void main() {
   // ===== 雨雾 =====
   float fogFactor = mix(
   exp(-10 * (FOG_SIZE - dist)),   // 普通雾
-  exp(-10 * (0.2 - dist)),        // 雨雾
+  exp(-10 * (FOG_SIZE_RAIN - dist)),        // 雨雾
   smoothstep(0.0, 0.3, rainStrength)
   );
   // 水下雾

@@ -31,6 +31,7 @@ float exponent = EXPONENT;
 
 /* 普通雾大小 */
 #define FOG_SIZE 0.3 // [0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0 100.0]
+#define FOG_SIZE_RAIN 0.2 // [0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0 100.0]
 #define FOG_COVER_SKY 1 // [0 1] 雾覆盖天空
 
 /* 天空颜色样式 */
