@@ -97,6 +97,8 @@ void main() {
     #endif
 
     vec3 sunlight = sunlightColor * clamp(dot(worldLightVector, normal), 0.0, 1.0) * shadow * (1.0 - rainStrength) * dayNightStrength;
+    //vec3 sunlight = sunlightColor * (max(dot(normal, worldLightVector), 0.0) * mix(0.2, 1.0, shadow) * mix(1.0, 0.4, rainStrength) * dayNightStrength);
+    //vec3 sunlight = sunlightColor * (pow(dot(worldLightVector, normal) * 0.5 + 0.5, 2.0) * shadow * (1.0 - rainStrength) * dayNightStrength);
 
     color = texture(colortex0, texcoord);
     color.rgb *= pow(blocklight, vec3(5.0)) * 3.0 + skylight + sunlight + vec3(0.15);
