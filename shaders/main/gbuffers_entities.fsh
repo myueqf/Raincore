@@ -1,4 +1,4 @@
-#version 120
+#version 330 compatibility
 
 #include /settings.glsl
 
@@ -8,18 +8,23 @@ varying vec2 texCoord;
 varying vec2 lmCoord;
 varying vec4 viewPos;
 
+/* RENDERTARGETS: 0,1,2 */
+
 void main() {
     vec4 texColor = texture2D(texture, texCoord) * color;
 
 #if ENTITYHIDDEN >= 1
-    // 计算当前像素点与玩家的欧几里得距离
     float dist = length(viewPos.xyz);
+    float hideDist = float(ENTITYHIDDEN);
 
-    float hideDist = ENTITYHIDDEN;
-    float fadeRange = 5.0;  // 淡出缓冲区
+    if (dist < hideDist) {
+        ivec2 px = ivec2(gl_FragCoord.xy);
+        if ((px.x ^ px.y) == 0) {
+            discard;
+        }
+    }
 
-    // smoothstep(下限, 上限, 当前值)
-    // 当 dist < 20 时返回 0.0，当 dist > 25 时返回 1.0
+    float fadeRange = 5.0;
     float visibility = smoothstep(hideDist, hideDist + fadeRange, dist);
 
     texColor.a *= visibility;
@@ -30,4 +35,6 @@ void main() {
     }
 
     gl_FragData[0] = texColor;
+    gl_FragData[1] = vec4(lmCoord, 0.0, 1.0);
+    gl_FragData[2] = vec4(0.0, 0.0, 0.0, 1.0);
 }
