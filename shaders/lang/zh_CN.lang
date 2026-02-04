@@ -60,7 +60,10 @@ value.SKYLIGHT_GAIN.0.0=关闭
 
 option.FOG_SIZE=迷雾
 value.FOG_SIZE.0.3=默认
-value.FOG_SIZE.100.0=关闭雾
+value.FOG_SIZE.100.0=禁用雾
+option.FOG_SIZE_RAIN=雨雾
+value.FOG_SIZE_RAIN.0.2=默认
+value.FOG_SIZE_RAIN.100.0=禁用雾
 option.FOG_COVER_SKY=雾覆盖天空
 value.FOG_COVER_SKY.1=开启
 value.FOG_COVER_SKY.0=关闭
