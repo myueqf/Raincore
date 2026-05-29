@@ -98,3 +98,10 @@ option.COLOR=Color Preset
 value.COLOR.0=§7Default
 value.COLOR.1=§7Morning Rain
 value.COLOR.2=§7Lavender
+
+option.XwX=Chromatic Aberration
+value.XwX.0.0=Off
+value.XwX.0.002=Default
+value.XwX.0.0015=High
+value.XwX.0.001=Low
+value.XwX.0.0005=Very Low

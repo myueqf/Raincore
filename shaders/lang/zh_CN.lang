@@ -98,3 +98,10 @@ option.COLOR=色调预设
 value.COLOR.0=§7暮土
 value.COLOR.1=§7晨雨
 value.COLOR.2=§7薰衣草
+
+option.XwX=色差强度
+value.XwX.0.0=关闭
+value.XwX.0.002=默认
+value.XwX.0.0015=较强
+value.XwX.0.001=较弱
+value.XwX.0.0005=非常弱

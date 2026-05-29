@@ -1,7 +1,7 @@
 #version 330 compatibility
 
 uniform sampler2D gColor;
-#define XwX 0.002 // 色差强度
+#define XwX 0.002 // [0.002 0.0015 0.001 0.0005 0.0] 色差强度
 #define QAQ 1
 varying vec2 texCoord;
 
