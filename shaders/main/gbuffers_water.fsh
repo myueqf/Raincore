@@ -16,6 +16,8 @@ layout(location = 2) out vec4 normalData;
 
 void main() {
     color = texture(gtexture, texcoord) * glcolor;
+    lightmapData = vec4(lmcoord, 0.0, 1.0);
+    normalData = vec4(normal * 0.5 + 0.5, 1.0);
 
     if (isEyeInWater == 1) {
         color.a = 0.9;
@@ -28,6 +30,4 @@ void main() {
     }
 
     color.a = 1.0;
-    lightmapData = vec4(lmcoord, 0.0, 1.0);
-    normalData = vec4(normal * 0.5 + 0.5, 1.0);
 }
