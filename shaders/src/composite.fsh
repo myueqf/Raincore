@@ -36,9 +36,20 @@ vec3 projectAndDivide(mat4 projectionMatrix, vec3 position){
 layout(location = 0) out vec4 color;
 
 void main() {
+    // 昼夜（提前计算，天空也需要去饱和）
+    float timeNormalized = fract(float(worldTime) / 24000.0);
+    float dayFactor = clamp(0.5 + 0.5 * cos((timeNormalized - 0.25) * 6.2832), 0.0, 1.0);
+    float dayNightStrength = dayFactor;
+    float nightFactor = 1.0 - dayFactor;
+    if (BRIGHTNESS_GAIN >= 0.1) dayNightStrength += BRIGHTNESS_GAIN;
+
+    float desatAmount = clamp(nightFactor * NIGHT_DESAT, 0.0, 1.0);
+
     float depth = texture(depthtex0, texcoord).r;
     if (depth == 1.0) {
         color = texture(colortex0, texcoord);
+        float skyLuma = dot(color.rgb, vec3(0.2126, 0.7152, 0.0722));
+        color.rgb = mix(color.rgb, vec3(skyLuma), desatAmount);
         return;
     }
 
@@ -51,11 +62,6 @@ void main() {
 
     vec3 lightVector = normalize(shadowLightPosition);
     vec3 worldLightVector = mat3(gbufferModelViewInverse) * lightVector;
-
-    // 昼夜
-    float timeNormalized = mod((13000 + 8000.0) / 24000.0, 1.0);
-    float dayNightStrength = 0.5 + 0.5 * cos((timeNormalized - 0.5) * 6.2832);
-    if (BRIGHTNESS_GAIN >= 0.1) dayNightStrength += BRIGHTNESS_GAIN;
 
     // 阴影坐标转换
     vec3 NDCPos = vec3(texcoord.xy, depth) * 2.0 - 1.0;
@@ -118,6 +124,10 @@ void main() {
 
     color = texture(colortex0, texcoord);
     color.rgb *= torchlight + skylight + sunlight + minLight;
+
+    // 夜间线性去饱和以区分昼夜
+    float luma = dot(color.rgb, vec3(0.2126, 0.7152, 0.0722));
+    color.rgb = mix(color.rgb, vec3(luma), desatAmount);
 
     // 动态曝光
     float sceneBright = (float(eyeBrightnessSmooth.y) * 0.75 + float(eyeBrightnessSmooth.x) * 0.25) / 255.0;

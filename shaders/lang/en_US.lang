@@ -58,6 +58,11 @@ value.BRIGHTNESS_GAIN.0.3=Default
 option.SKYLIGHT_GAIN=Sky Light Gain
 value.SKYLIGHT_GAIN.0.0=Off
 
+option.NIGHT_DESAT=Night Desaturation
+option.NIGHT_DESAT.comment=Linearly reduces saturation at night to distinguish day from night.\nHigher values look more monochrome at night.
+value.NIGHT_DESAT.0.0=Off
+value.NIGHT_DESAT.0.6=Default
+
 option.FOG_SIZE=Fog Density
 value.FOG_SIZE.0.3=Default
 value.FOG_SIZE.100.0=Disable Fog
