@@ -41,5 +41,5 @@ void main() {
 
     gl_FragData[0] = texColor;
     gl_FragData[1] = vec4(lmCoord, 0.0, 1.0);
-    gl_FragData[2] = vec4(0.0, 0.0, 0.0, 1.0);
+    gl_FragData[2] = vec4(0.5, 0.5, 0.5, 1.0);
 }
